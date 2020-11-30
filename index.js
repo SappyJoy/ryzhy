@@ -9,6 +9,7 @@ const tempCard = fs.readFileSync(`${__dirname}/templates/template-card.html`, 'u
 const tempPoem = fs.readFileSync(`${__dirname}/templates/template-poem.html`, 'utf-8');
 const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, 'utf-8');
 const dataObj = JSON.parse(data)
+const port = 80;
 
 const server = http.createServer((req, res) => {
     // console.log(req.url);
@@ -55,7 +56,7 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(8000, '127.0.0.1', () => {
+server.listen(port, () => {
     console.log("Listening on the port 8000...");
 });
 
