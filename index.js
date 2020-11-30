@@ -57,7 +57,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-    console.log("Listening on the port 8000...");
+    console.log(`Listening on the port ${port}...`);
 });
 
 function error404(res) {
